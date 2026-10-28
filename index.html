@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Reading Tracker - Vedanshi Agrawal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>📚 My Book Reading List</h1>
+      <p>Organize, track, and achieve your reading milestones</p>
+    </header>
+
+    <div class="form-card">
+      <h2>Add a New Book</h2>
+      <form id="book-form">
+        <input type="text" id="title" placeholder="Book Title" required>
+        <input type="text" id="author" placeholder="Author" required>
+        <select id="status">
+          <option value="Reading">Currently Reading</option>
+          <option value="Completed">Completed</option>
+          <option value="Wishlist">Wishlist</option>
+        </select>
+        <button type="submit" class="btn">Add Book</button>
+      </form>
+    </div>
+
+    <div class="filter-controls">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="Reading">Reading</button>
+      <button class="filter-btn" data-filter="Completed">Completed</button>
+      <button class="filter-btn" data-filter="Wishlist">Wishlist</button>
+    </div>
+
+    <div id="books-grid" class="books-grid"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
